@@ -10,7 +10,7 @@ class Solution {
         while(right<n){
             char a=s.charAt(left);
             char b=s.charAt(left+1);
-            char c=s.charAt(left+2);
+            char c=s.charAt(right);
             if(a!=b && b!=c && c!=a){
                 count++;
             }
