@@ -1,18 +1,26 @@
 class Solution {
-    public boolean isAnagram(String s, String t) {
-        Map<Character, Integer> count = new HashMap<>();
-        
-        for (char c : s.toCharArray()) {
-            count.put(c, count.getOrDefault(c, 0) + 1);
+    public boolean isAnagram(String s, String t) {   
+
+        if (s.length() != t.length())
+            return false;
+
+    
+        if(s.length()!=t.length()){
+            return false;
         }
-        
-        
-        for (char c : t.toCharArray()) {
-            if (!count.containsKey(c)) return false;
-            count.put(c, count.get(c) - 1);
-            if (count.get(c) == 0) count.remove(c);
+        int n=s.length();
+        int freq[]= new int[26];
+        for(int i=0; i<n; i++){
+            freq[s.charAt(i)-'a']++;
+            freq[t.charAt(i)-'a']--;
         }
-        
-        return count.isEmpty();
+        for(int i=0; i<freq.length; i++){
+            if(freq[i]!=0){
+                return false;
+            }
+        }
+        return true;
+
+
     }
 }
