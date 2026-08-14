@@ -3,21 +3,21 @@ class Solution {
 
         int i = 0;
         int j = 0;
-        String ans = "";
+        StringBuilder ans = new StringBuilder();
 
         while (i < s.length() && j < t.length()) {
-            ans += s.charAt(i++);
-            ans += t.charAt(j++);
+            ans.append(s.charAt(i++));
+            ans.append(t.charAt(j++));
         }
 
         while (i < s.length()) {
-            ans += s.charAt(i++);
+            ans.append(s.charAt(i++));
         }
 
         while (j < t.length()) {
-            ans += t.charAt(j++);
+            ans.append(t.charAt(j++));
         }
 
-        return ans;
+        return ans.toString();
     }
 }
