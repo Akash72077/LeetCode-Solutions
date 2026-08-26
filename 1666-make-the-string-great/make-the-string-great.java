@@ -7,20 +7,24 @@ class Solution {
          char ch = s.charAt(i);
          if(st.isEmpty()){
             st.push(ch);
-            sb.append(ch);
+            // sb.append(ch);
             
         }
         else if(Math.abs(st.peek()-ch)==32){
             st.pop();
-            sb.deleteCharAt(sb.length()-1);
+            // sb.deleteCharAt(sb.length()-1);
         }else{
-            sb.append(ch);
+            // sb.append(ch);
             st.push(ch);
         }
 
     }
 
+    while(!st.isEmpty()){
+        sb.append(st.pop());
+    }
 
-        return sb.toString();
+
+        return sb.reverse().toString();
     }
 }
