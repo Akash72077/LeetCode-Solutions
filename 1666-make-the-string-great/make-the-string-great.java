@@ -20,11 +20,11 @@ class Solution {
 
     }
 
-    while(!st.isEmpty()){
-        sb.append(st.pop());
+    for(char ch:st){
+        sb.append(ch);
     }
 
 
-        return sb.reverse().toString();
+        return sb.toString();
     }
 }
