@@ -1,0 +1,24 @@
+class Solution {
+    public String makeGood(String s) {
+        StringBuilder sb = new StringBuilder();
+        Stack<Character> st = new Stack<>();
+            int n=s.length();
+    for(int i=0; i<n; i++){
+        char ch = s.charAt(i);
+        if(st.isEmpty()){
+            st.push(ch);
+            sb.append(ch);
+            
+        }
+        else if(Math.abs(st.peek()-ch)==32){
+            st.pop();
+            sb.deleteCharAt(sb.length()-1);
+        }else{
+            sb.append(ch);
+            st.push(ch);
+        }
+
+    }
+        return sb.toString();
+    }
+}
