@@ -3,9 +3,9 @@ class Solution {
         StringBuilder sb = new StringBuilder();
         Stack<Character> st = new Stack<>();
             int n=s.length();
-    for(int i=0; i<n; i++){
-        char ch = s.charAt(i);
-        if(st.isEmpty()){
+        for(int i=0; i<n; i++){
+         char ch = s.charAt(i);
+         if(st.isEmpty()){
             st.push(ch);
             sb.append(ch);
             
@@ -19,6 +19,8 @@ class Solution {
         }
 
     }
+
+
         return sb.toString();
     }
 }
