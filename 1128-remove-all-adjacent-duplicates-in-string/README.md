@@ -15,7 +15,6 @@ For example, in &quot;abbaca&quot; we could remove &quot;bb&quot; since the lett
 </pre>
 
 <p><strong class="example">Example 2:</strong></p>
-
 <pre>
 <strong>Input:</strong> s = &quot;azxxzy&quot;
 <strong>Output:</strong> &quot;ay&quot;
